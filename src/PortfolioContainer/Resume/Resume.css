@@ -1,0 +1,483 @@
+
+
+.resume-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: fit-content;
+    margin: 120px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.resume-card {
+    display: flex;
+    height: 360px;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.resume-bullets {
+    box-shadow: 15px 0 9px -15px #1f2235;
+    height: 100%;
+    width: 320px;
+    background: #f8f9fa;
+}
+
+.resume-bullet-details {
+    flex-grow: 1;
+    width: 600px;
+    overflow: hidden;
+    padding: 0 0 0 30px;
+    position: relative;
+}
+
+.experience-description {
+    margin: 10px 0 0 0;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.resume-description-text {
+    font-size: 14px;
+    color: #444;
+}
+
+.resume-details-carousal {
+    transition: transform 0.5s ease-out;
+    height: 360px;
+}
+
+.bullet-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.bullets {
+    width: 86%;
+    position: relative;
+    z-index: 2;
+    padding: 20px 0;
+}
+
+.bullet {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #fff;
+    height: 40px;
+    margin: 15px 0;
+    padding: 0 15px;
+    border-radius: 20px;
+    width: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid transparent;
+}
+
+.bullet-label {
+    font-size: 14px;
+    white-space: nowrap;
+    font-family: "Poppins SemiBold";
+    color: #555;
+    margin-left: 10px;
+}
+
+.bullet-logo {
+    height: 16px;
+    margin: 0 15px 0 0;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.bullet-icons {
+    width: 34px;
+    height: 100%;
+    z-index: 1;
+    background-color: #f8f9fa;
+    position: absolute;
+}
+
+.selected-bullet {
+    color: var(--white);
+    width: 100%;
+    background-color: #ff5823;
+    border-left: 4px solid #1f2235;
+}
+
+.selected-bullet .bullet-label {
+    color: white;
+}
+
+.selected-bullet .bullet-logo {
+    filter: brightness(0) invert(1);
+}
+
+.resume-screen-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 360px;
+    width: 100%;
+    padding-right: 15px;
+    overflow-y: auto;
+}
+
+.resume-screen-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.resume-screen-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.resume-screen-container::-webkit-scrollbar-thumb {
+    background: #ff5823;
+    border-radius: 10px;
+}
+
+.resume-heading {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.resume-main-heading {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.resume-main-heading span {
+    color: #1f2235;
+    font-size: 18px;
+    font-family: "Poppins SemiBold";
+}
+
+
+
+.resume-sub-heading {
+    font-size: 16px;
+    font-family: "Poppins Medium";
+    color: #555;
+    margin: 5px 0 10px 0;
+}
+
+.resume-heading-description {
+    font-size: 14px;
+    text-align: justify;
+    color: #666;
+    line-height: 1.6;
+}
+
+.heading-date {
+    background-color: #ff5823;
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 10px;
+    color: white;
+    font-family: "Poppins Medium";
+}
+
+/* Skills Section Styles */
+.skills-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.skills-header h3 {
+    color: #1f2235;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.skills-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+.skill-category {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.category-title {
+    color: #1f2235;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ff5823;
+    font-family: "Poppins SemiBold";
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.skill-parent {
+    margin-bottom: 12px;
+}
+
+.skill-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.skill-name {
+    flex: 1;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #444;
+    font-family: "Poppins Medium";
+}
+
+.skill-percentage {
+    color: #ff5823;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+    min-width: 40px;
+    text-align: right;
+}
+
+.skill-percentage-bar {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.active-percentage-bar {
+    height: 100%;
+    background: #ff5823;
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+/* Achievements Section */
+.achievements-list {
+    margin-bottom: 25px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.achievement-item:hover {
+    transform: translateX(5px);
+    background: #fff4f0;
+}
+
+.achievement-icon {
+    font-size: 20px;
+    margin-right: 15px;
+    width: 30px;
+    text-align: center;
+}
+
+.achievement-content {
+    flex: 1;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Certifications Section */
+.certifications-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.certification-item {
+    padding: 10px 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #ff5823;
+    font-size: 13px;
+    color: #555;
+    transition: transform 0.2s;
+}
+
+.certification-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Languages Section */
+.languages-list {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.language-item {
+    padding: 8px 15px;
+    background: #f9f9f9;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #eee;
+}
+
+/* IPAD PRO RESPONSIVENESS */
+@media only screen and (max-width: 1110px) {
+    .resume-card {
+        width: 880px;
+    }
+
+    .resume-bullet-details {
+        padding: 0 0 0 70px;
+    }
+}
+
+/* IPAD RESPONSIVENESS */
+@media only screen and (max-width: 1023px) {
+    .resume-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bullets {
+        width: 90%;
+    }
+
+    .resume-card {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+        align-items: center;
+        width: 90%;
+    }
+
+    .resume-bullet-details {
+        height: 360px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .resume-bullets {
+        margin: 30px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .selected-bullet {
+        width: 100%;
+    }
+
+    .bullet {
+        margin: 10px 0;
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media only screen and (max-width: 767px) {
+    .resume-container {
+        margin: 80px 0;
+    }
+    
+    .resume-card {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .resume-bullets {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 5px 9px -5px #1f2235;
+    }
+    
+    .bullets {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .bullet {
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+        margin: 5px;
+    }
+    
+    .bullet-label {
+        font-size: 12px;
+    }
+    
+    .resume-bullet-details {
+        width: 100%;
+        padding: 20px;
+        height: 400px;
+    }
+    
+    .resume-screen-container {
+        height: 400px;
+    }
+    
+    .resume-details-carousal {
+        height: 400px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certifications-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .languages-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Very small devices */
+@media only screen and (max-width: 480px) {
+    .resume-main-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .heading-date {
+        margin-top: 5px;
+    }
+    
+    .bullet {
+        min-width: 100px;
+    }
+    
+    .resume-bullet-details {
+        padding: 10px;
+    }
+}

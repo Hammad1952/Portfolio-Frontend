@@ -1,0 +1,191 @@
+.project-card {
+    border: 1px solid #ccc; /* Add border to the card */
+    border-radius: 0.5rem; /* Rounded corners */
+    background-color: white; /* Background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    overflow: hidden; /* Prevent overflow of child elements */
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+  }
+  
+  .project-card img {
+    width: 100%; /* Full width */
+    height: 240px; /* Fixed height */
+    object-fit: cover; /* Cover the area without stretching */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+  }
+  
+  .project-card img:hover {
+    transform: scale(1.1); /* Scale image on hover */
+  }
+  
+  .w-full {
+    width: 100%; /* Full width */
+  }
+  
+  .mt-5 {
+    margin-top: 1.25rem; /* Top margin */
+  }
+  
+  .flex {
+    display: flex; /* Flexbox layout */
+  }
+  
+  .flex-col {
+    flex-direction: column; /* Column direction */
+  }
+  
+  .gap-6 {
+    gap: 1.5rem; /* Gap between flex items */
+  }
+  
+  .items-center {
+    align-items: center; /* Center items vertically */
+  }
+  
+  .justify-between {
+    justify-content: space-between; /* Space between items */
+  }
+  
+  .projects-card-title {
+    font-size: 1.25rem; /* Title font size */
+    font-weight: bold; /* Bold title */
+    color: #333; /* Dark color */
+    cursor: pointer;
+  }
+  .projects-card-title:hover {
+    color: #ff5722; /* Change color on hover */
+  }
+  
+  .projects-card-description {
+    font-size: 0.875rem; /* Description font size */
+    color: #666; /* Lighter color for description */
+  }
+  
+  .rounded-full {
+    border-radius: 50%; /* Full rounding */
+  }
+  
+  .bg-black {
+    background-color: black; /* Black background */
+  }
+  
+  .hover\:text-designColor:hover {
+    color: #ff5722; /* Change color on hover */
+  }
+  
+  .duration-300 {
+    transition-duration: 300ms; /* Transition duration */
+  }
+  
+  .cursor-pointer {
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  .w-10 {
+    width: 2.5rem; /* Width for the icon container */
+  }
+  
+  .h-10 {
+    height: 2.5rem; /* Height for the icon container */
+  }
+  
+  .text-lg {
+    font-size: 1.125rem; /* Large text size */
+  }
+  
+  .text-gray-400 {
+    color: #b0b0b0; /* Gray color */
+  }
+  
+
+  .icon-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    width: 2.5rem; /* Adjust width */
+    height: 2.5rem; /* Adjust height */
+    border-radius: 50%; /* Full rounding */
+    background-color: #1f2235;/* Black background */
+    color: #b0b0b0; /* Initial icon color */
+    transition: color 0.3s ease; /* Transition for hover effect */
+    cursor: pointer; /* Pointer cursor */
+  }
+  .icon-container:hover {
+    color: #ff5722; /* Change color on hover */
+  }
+
+  .icon-link {
+    color: inherit; /* Inherit color from the parent container */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+.icon-link:hover {
+    color:  #ff5722; /* Change color to orange on hover */
+}
+
+/* Image Viewer Container */
+.image-viewer-container {
+  position: fixed; /* Make it fixed to overlay on the page */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%; /* Fullscreen width */
+  height: 100%; /* Fullscreen height */
+  background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+  display: flex; /* Initially hidden */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  z-index: 1000; /* Ensure it overlays other elements */
+  overflow: auto;
+}
+
+/* Show the image viewer */
+.image-viewer-container.active {
+  display: flex; /* Show when active */
+}
+
+/* Image inside the viewer */
+.image-viewer {
+  max-width: 100%; /* Limit width */
+  max-height: 100%; /* Limit height */
+  border-radius: 10px; /* Rounded corners for the image */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+.image-viewer:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Close Button */
+.image-viewer-close {
+  position: absolute; /* Position relative to the container */
+  top: 20px;
+  right: 20px;
+  font-size: 2rem; /* Large font size for visibility */
+  color: white; /* White close button */
+  cursor: pointer; /* Pointer cursor */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.image-viewer-close:hover {
+  color: #ff5722; /* Change color on hover */
+}
+/* Default styling for the "See More" text */
+.see-more-text {
+  color: #333; /* Default text color */
+  text-decoration: none; /* Remove default underline */
+  font-weight: 600; /* Make it bold for emphasis */
+  cursor: pointer; /* Make it appear clickable */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for "See More" text */
+.see-more-text:hover {
+  color: #ff5722; /* Turn the text color to orange on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
