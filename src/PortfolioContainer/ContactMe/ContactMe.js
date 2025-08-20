@@ -207,7 +207,7 @@ export default function ContactMe(props) {
 
     emailjs
       .send(
-        "service_b3uvkqw",   // 🔹 Replace with EmailJS Service ID
+        "service_ju1sc5e",   // 🔹 Replace with EmailJS Service ID
         "template_8txckl5",  // 🔹 Replace with EmailJS Template ID
         {
           name: name,
